@@ -1,43 +1,72 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:/Eclipse/GroupActivity/src/main/resources/LoginPage.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:/Eclipse/GroupActivity/src/main/resources/FundTransfer.feature");
 formatter.feature({
-  "name": "Verifying demo bank details",
+  "name": "FundTransfer",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "verifying login details",
+  "name": "User login into page and do fund transfer",
   "description": "",
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "user is on rapid test page",
+  "name": "user login into the Demo bank page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "RegisterMainClass.url()"
+  "location": "FundTransferMainClass.chrome()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enter details",
+  "name": "user login using valid credentials",
   "keyword": "When "
 });
 formatter.match({
-  "location": "RegisterMainClass.product()"
+  "location": "FundTransferMainClass.Clicks_login()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks submit and logout",
+  "name": "user click FundTransfer",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "FundTransferMainClass.Clicks_FT()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user fills the fund transfer form",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "RegisterMainClass.select()"
+  "location": "FundTransferMainClass.FT_Form()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat stepdef.RegisterMainClass.select(RegisterMainClass.java:42)\r\n\tat ✽.user clicks submit and logout(D:/Eclipse/GroupActivity/src/main/resources/LoginPage.feature:6)\r\n",
-  "status": "failed"
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter transcation authorisation code",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "FundTransferMainClass.Auth_Code()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "after successfull transcation user logouts",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "FundTransferMainClass.Logout()"
+});
+formatter.result({
+  "status": "passed"
 });
 });
