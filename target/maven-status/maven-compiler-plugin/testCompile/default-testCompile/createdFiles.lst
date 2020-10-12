@@ -1,0 +1,6 @@
+stepdef\FundTransferMainClass.class
+runnerclass\RunnerClass.class
+runnerclass\RunnerClassFT.class
+stepdef\RegisterBaseClass.class
+stepdef\FundTransferBaseClass.class
+stepdef\RegisterMainClass.class

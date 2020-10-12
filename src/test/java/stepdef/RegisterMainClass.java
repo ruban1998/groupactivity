@@ -39,8 +39,7 @@ public class RegisterMainClass extends RegisterBaseClass {
 	@Then("user clicks submit and logout") 
 	public void select() throws Exception {
 		RegisterBaseClass.Submit();
-		obj.close();
-	}
+			}
 	
 	
 	

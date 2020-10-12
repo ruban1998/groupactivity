@@ -216,6 +216,7 @@ public class RegisterBaseClass {
 	{
 		
 		obj.findElement(By.id("submitButton")).click();
+		obj.close();
 
 
 	}
